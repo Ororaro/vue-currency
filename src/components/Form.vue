@@ -5,7 +5,7 @@
         <h3>CurrencyConvert To THB</h3>
         <h4>Enter Amount</h4>
         <input type="number" required v-model="bath" />
-        <h4>To</h4>
+        <h4 style="margin-top: 20px">To</h4>
         <select v-model="currency">
           <option value="" selected>Select currency</option>
           <option v-for="item in items">
@@ -13,8 +13,8 @@
           </option>
         </select>
         <button type="submit" class="button button1">Button</button>
-        <h5>Result</h5>
-        <p>{{bath}} THB = {{valuesconvert}} {{currency}}</p>
+        <h5>Result (THB)</h5>
+        <p>{{valuesconvert}}</p>
       </div>
     </form>
   </div>
@@ -54,7 +54,8 @@ export default {
 <style scoped>
 .card {
   padding: 16px;
-  border: 1px solid #000;
+  border: 1px solid #d8d5d5;
+  border-radius: 8px;
 }
 .container {
   padding: 2px 16px;
@@ -65,7 +66,7 @@ export default {
 h3 {
   text-align: center;
   font-weight: 700;
-  font-size: 28px;
+  font-size: 26px;
 }
 input {
   width: 100%;
@@ -74,7 +75,7 @@ input {
 form {
   background: #ffffff;
   width: 100%;
-  height: 500px;
+  height: 550px;
   max-width: 450px;
   margin: 0 auto 100px;
   box-sizing: border-box;
@@ -84,6 +85,7 @@ form {
 h4 {
   text-align: left;
   margin-top: 10px;
+  font-weight: 700;
 }
 select {
   width: 100%;
@@ -97,10 +99,11 @@ select {
   text-align: center;
   text-decoration: none;
   font-size: 16px;
-  margin-top: 15px;
+  margin: 25px 0;
   cursor: pointer;
   transition: 0.5s;
   width: 100%;
+  border-radius: 8px;
 }
 .button:hover {
   background-color: #08bb79;
